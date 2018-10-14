@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="NiSiC">
 <meta property="og:description" content="I am a student who is studying at Computational Acoustics. I will post some articles about my research area occasionally. Suggestions and advices are welcomed;)">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-14T05:35:53.640Z">
+<meta property="og:updated_time" content="2018-10-14T07:24:05.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="about me">
 <meta name="twitter:description" content="I am a student who is studying at Computational Acoustics. I will post some articles about my research area occasionally. Suggestions and advices are welcomed;)">
@@ -346,6 +346,16 @@
           
 
   
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
 
 
 
@@ -372,6 +382,10 @@
       <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="Nescirem" />
             
               <p class="site-author-name" itemprop="name">Nescirem</p>
               <p class="site-description motion-element" itemprop="description">a computational acoustics leaner.</p>
@@ -456,7 +470,7 @@
 
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -464,7 +478,8 @@
 
 
 
-  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a>
+</div>
 
 
 
@@ -579,9 +594,30 @@
 
   
 
-
+  
+    <script id="dsq-count-scr" src="https://NiSiC.disqus.com/count.js" async></script>
+  
 
   
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://nescirem.github.io/about/index.html';
+        this.page.identifier = 'about/index.html';
+        this.page.title = 'about me';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://NiSiC.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
 
 
 
