@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>NiSiC</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://nescirem.github.io/"/>
+  <updated>2018-10-14T10:03:57.620Z</updated>
+  <id>http://nescirem.github.io/</id>
+  
+  <author>
+    <name>Nescirem</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World!</title>
+    <link href="http://nescirem.github.io/2018/10/14/hello-world/"/>
+    <id>http://nescirem.github.io/2018/10/14/hello-world/</id>
+    <published>2018-10-14T10:03:57.637Z</published>
+    <updated>2018-10-14T10:03:57.620Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://nescirem.github.io/">NiSiC</a>! This is an individual blog based on <a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo</a>, host by <a href="https://github.com/" target="_blank" rel="noopener">Github</a>.</p><p>I am the website hoder - a student who is studying at Computational Acoustics. I will post some articles about my research area occasionally. Suggestions and advices are welcomed;)</p><p>Thanks for visiting.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;http://nescirem.github.io/&quot;&gt;NiSiC&lt;/a&gt;! This is an individual blog based on &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_b
+      
+    
+    </summary>
+    
+    
+      <category term="initial post" scheme="http://nescirem.github.io/tags/initial-post/"/>
+    
+  </entry>
+  
+</feed>
