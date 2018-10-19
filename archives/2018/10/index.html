@@ -19,7 +19,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '6.4.2',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -137,7 +137,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h2 class="post-title">
-            <a class="post-title-link" href="/2018/10/19/when-should-I-use-linear-acoustic-theory-instead-of-nonlinear-one/" itemprop="url">
+            <a class="post-title-link" href="/2018/when-should-I-use-linear-acoustic-theory-instead-of-nonlinear-one/" itemprop="url">
                 <span itemprop="name">When to use linear acoustic theory instead of the nonlinear one</span>
             </a>
       </h2>
@@ -153,7 +153,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h2 class="post-title">
-            <a class="post-title-link" href="/2018/10/14/hello-world/" itemprop="url">
+            <a class="post-title-link" href="/2018/hello-world/" itemprop="url">
                 <span itemprop="name">Hello World!</span>
             </a>
       </h2>
@@ -178,6 +178,7 @@
     </div>
   </div>
   <aside id="sidebar" class="sidebar">
+      <div id="sidebar-dimmer"></div>
     <div class="sidebar-inner">
       <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
@@ -210,10 +211,10 @@
             </div>
             <div class="links-of-author motion-element">
                 <span class="links-of-author-item">
-                  <a href="https://github.com/nescirem" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/nescirem" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i></a>
                 </span>
                 <span class="links-of-author-item">
-                  <a href="https://twitter.com/nescirem" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  <a href="https://twitter.com/nescirem" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i></a>
                 </span>
             </div>
         </div>
@@ -234,6 +235,7 @@
     </footer>
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+          <span id="scrollpercent"><span>0</span>%</span>
       </div>
   </div>
 <script type="text/javascript">
