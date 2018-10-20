@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://nescirem.github.io/"/>
+  <link href="http://nisic.tech/"/>
   <updated>2018-10-20T12:45:36.527Z</updated>
-  <id>http://nescirem.github.io/</id>
+  <id>http://nisic.tech/</id>
   
   <author>
     <name>Nescirem</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>When to use linear acoustic theory instead of the nonlinear one</title>
-    <link href="http://nescirem.github.io/2018/when-should-I-use-linear-acoustic-theory-instead-of-nonlinear-one/"/>
-    <id>http://nescirem.github.io/2018/when-should-I-use-linear-acoustic-theory-instead-of-nonlinear-one/</id>
+    <link href="http://nisic.tech/2018/when-should-I-use-linear-acoustic-theory-instead-of-nonlinear-one/"/>
+    <id>http://nisic.tech/2018/when-should-I-use-linear-acoustic-theory-instead-of-nonlinear-one/</id>
     <published>2018-10-19T01:56:39.000Z</published>
     <updated>2018-10-20T12:45:36.527Z</updated>
     
@@ -35,32 +35,32 @@
     </summary>
     
     
-      <category term="nonlinear acoustic" scheme="http://nescirem.github.io/tags/nonlinear-acoustic/"/>
+      <category term="nonlinear acoustic" scheme="http://nisic.tech/tags/nonlinear-acoustic/"/>
     
-      <category term="Acoustic Reynolds Number" scheme="http://nescirem.github.io/tags/Acoustic-Reynolds-Number/"/>
+      <category term="Acoustic Reynolds Number" scheme="http://nisic.tech/tags/Acoustic-Reynolds-Number/"/>
     
   </entry>
   
   <entry>
     <title>Hello World!</title>
-    <link href="http://nescirem.github.io/2018/hello-world/"/>
-    <id>http://nescirem.github.io/2018/hello-world/</id>
+    <link href="http://nisic.tech/2018/hello-world/"/>
+    <id>http://nisic.tech/2018/hello-world/</id>
     <published>2018-10-14T10:03:57.637Z</published>
     <updated>2018-10-14T10:03:57.620Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://nescirem.github.io/">NiSiC</a>! This is an individual blog based on <a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo</a>, host by <a href="https://github.com/" target="_blank" rel="noopener">Github</a>.</p><p>I am the website hoder - a student who is studying at Computational Acoustics. I will post some articles about my research area occasionally. Suggestions and advices are welcomed;)</p><p>Thanks for visiting.</p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://nescirem.github.io/" target="_blank" rel="noopener">NiSiC</a>! This is an individual blog based on <a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo</a>, host by <a href="https://github.com/" target="_blank" rel="noopener">Github</a>.</p><p>I am the website hoder - a student who is studying at Computational Acoustics. I will post some articles about my research area occasionally. Suggestions and advices are welcomed;)</p><p>Thanks for visiting.</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;http://nescirem.github.io/&quot;&gt;NiSiC&lt;/a&gt;! This is an individual blog based on &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_b
+        &lt;p&gt;Welcome to &lt;a href=&quot;http://nescirem.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;NiSiC&lt;/a&gt;! This is an individual blog based on &lt;a href=&quot;ht
       
     
     </summary>
     
     
-      <category term="initial post" scheme="http://nescirem.github.io/tags/initial-post/"/>
+      <category term="initial post" scheme="http://nisic.tech/tags/initial-post/"/>
     
   </entry>
   
