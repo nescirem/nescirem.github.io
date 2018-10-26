@@ -46,9 +46,9 @@
 <meta property="og:image" content="http://nisic.tech/imgs/mainTypesOfPorousMedia.png">
 <meta property="og:image" content="http://nisic.tech/imgs/SierpinskiTriangle.png">
 <meta property="og:image" content="http://nisic.tech/imgs/MengerSponge.jpg">
-<meta property="og:image" content="http://nisic.tech/imgs/RayleighWave.jpg">
-<meta property="og:image" content="http://nisic.tech/imgs/LoveWave.jpg">
-<meta property="og:updated_time" content="2018-10-26T12:37:53.294Z">
+<meta property="og:image" content="http://nisic.tech/imgs/Rayleigh_wave.gif">
+<meta property="og:image" content="http://nisic.tech/imgs/Love_wave.gif">
+<meta property="og:updated_time" content="2018-10-26T15:20:42.274Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A brief introduction for wave propagations in porous media">
 <meta name="twitter:description" content="Introduction of Porous Media Most materials containing pores in them are considered as porous media and porous media widely exist in the world. Basically, a porous medium consists of pore portion and">
@@ -155,7 +155,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
                 <span class="post-meta-item-text">Posted on</span>
-              <time title="Created: 2018-10-26 19:54:39 / Modified: 20:37:53" itemprop="dateCreated datePublished" datetime="2018-10-26T19:54:39+08:00">2018-10-26</time>
+              <time title="Created: 2018-10-26 19:54:39 / Modified: 23:20:42" itemprop="dateCreated datePublished" datetime="2018-10-26T19:54:39+08:00">2018-10-26</time>
           </span>
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
@@ -172,7 +172,7 @@
     <div class="post-body" itemprop="articleBody">
         <h2 id="introduction-of-porous-media">Introduction of Porous Media</h2>
 <p>Most materials containing pores in them are considered as porous media and porous media widely exist in the world. Basically, a porous medium consists of pore portion and solid matrix or skeletal portion, The porous media in nature are usually filled with liquid or gas. Strictly speaking, most of solid materials in nature are porous media. Fig.1 shows the three main types of porous media, their typical microscopic arrangements and some of the physical models used to describe their mechanisms.</p>
-<p><img src="/imgs/mainTypesOfPorousMedia.png" title="threeMainTypesOfPorousMedia"></p>
+<p><img src="/imgs/mainTypesOfPorousMedia.png" title="three main types of porous media"></p>
 <p>Fig.1. The three main types of porous media (adapted from Ref. 2)</p>
 <p>With the significant development of the research and applications on porous media in recent years, the concept of porous media can be seen in applying in many areas of applied science and engineering. Wave propagations in porous media have great application significances in the areas of geophysics, earthquake, civil engineering, mechanical engineering, and petroleum engineering.</p>
 <h2 id="continuum-hypothesis-and-fractal-theories">Continuum Hypothesis and Fractal Theories</h2>
@@ -180,8 +180,8 @@
 <blockquote>
 <p>For certain media, if the porosity is irrelevant to the spatial position, the media are called homogenous media. Otherwise, it is called inhomogeneous media.</p>
 </blockquote>
-<p>The word fractal was first introduce by a mathematician, <a href="https://en.wikipedia.org/wiki/Benoit_Mandelbrot" target="_blank" rel="noopener">Mandelbrot</a>. The parameter for quantitative description of the property of fractal is called fractal dimension. Contrary to the classical Euclid geometry, whose dimension can only be assigned as an integer because it deals with regular geometrical figures, the dimension of fractal structure is a fraction. The fractal theory is applied to potential regulations from the superficial irregularity and has been widely used among many subjects.</p>
-<p>The man characteristics of fractal geometry are self-similar and scale invariant which means part of geometrical shape can be exactly or very close to a reduced size copy of the whole. Actually, it has been reported that the microstructure and the distribution of pore size possess the characteristics of fractal. <a href="https://en.wikipedia.org/wiki/Sierpinski_triangle" target="_blank" rel="noopener">Sierpinski triangle</a> and <a href="https://en.wikipedia.org/wiki/Menger_sponge" target="_blank" rel="noopener">Menger sponge</a>, as shown in Fig. 2 and Fig. 3, are typical models usually used in mathematical representing the geometries of porous media.</p>
+<p>The word &quot;fractal&quot; was first introduce by a mathematician, <a href="https://en.wikipedia.org/wiki/Benoit_Mandelbrot" target="_blank" rel="noopener">Mandelbrot</a>. The parameter for quantitative description of the property of fractal is called fractal dimension. Contrary to the classical Euclid geometry, whose dimension can only be assigned as an integer because it deals with regular geometrical figures, the dimension of fractal structure is a fraction. The fractal theory is applied to potential regulations from the superficial irregularity and has been widely used among many subjects.</p>
+<p>The main characteristics of fractal geometry are self-similar and scale invariant which means part of geometrical shape can be exactly or very close to a reduced size copy of the whole. Actually, it has been reported that the microstructure and the distribution of pore size possess the characteristics of fractal. <a href="https://en.wikipedia.org/wiki/Sierpinski_triangle" target="_blank" rel="noopener">Sierpinski triangle</a> and <a href="https://en.wikipedia.org/wiki/Menger_sponge" target="_blank" rel="noopener">Menger sponge</a>, as shown in Fig. 2 and Fig. 3, are typical models usually used in mathematical representing the geometries of porous media.</p>
 <p><img src="/imgs/SierpinskiTriangle.png" title="Sierpinski triangle"></p>
 <p>Fig. 2. Sierpinski triangle (adapted from Wikipedia)</p>
 <p><img src="/imgs/MengerSponge.jpg" title="Menger sponge"></p>
@@ -197,18 +197,38 @@
 <li>SV wave (shear vertical wave)</li>
 <li>SH wave (shear horizonal wave)</li>
 </ul>
+<h3 id="biot-theory">Biot theory</h3>
+<p>Biot theory describes the elastic waves propagation in a porous saturated medium. Biot ignores the microscopic level and assumes that continuum mechanics can be applied to measurable macroscopic quantities. He postulates the Lagrangian and use Hamilton principle to derive the equations that govern the wave propagation.</p>
+<p>The main assumptions of the theory are:</p>
+<ol type="1">
+<li>Infinitesimal transformations occur between the reference and current states of deformation. Displacements, strains and particle velocities are small. Consequently, the Eulerian and Lagrangian formulations coincide up to the first-order. The constitutive equations, dissipation forces, and kinetic momenta are linear. (The strain energy, dissipation potential and kinetic energy are quadratic forms in the field variables.)</li>
+<li>The principles of continuum mechanics can be applied to measurable macroscopic values. The macroscopic quantities used in Biot&apos;s theory are volume averages of the corresponding microscopic quantities of the constituents.</li>
+<li>The wavelength is large compared with the dimensions of a macroscopic elementary volume. This volume has well defined properties, such as porosity, permeability and elastic moduli, which are representative of the medium. Scattering effects are thus neglected.</li>
+<li>The conditions are isothermal.</li>
+<li>The stress distribution in the fluid is hydrostatic. (It may be not completely hydrostatic, since the fluid is viscous.)</li>
+<li>The liquid phase is continuous. The matrix consists of the solid phase and disconnected pores, which do not contribute to the porosity.</li>
+<li>In most cases, the material of the frame is isotropic. Anisotropy is due to a preferential alignment of the pores (or cracks).</li>
+</ol>
 <h2 id="wave-propagations-in-porous-media-half-space-domain">Wave propagations in Porous Media half space domain</h2>
-<p>In engineering applications, the discussion of wave propagations in porous media half-space is often needed. And at a free boundary of half-space, the reflection and refraction of the incident wave must be considered. Surely, that would be a difficult subject.</p>
+<p>In engineering applications, the discussion of wave propagations in porous media half-space is often needed. And at a free boundary of half-space, the reflection, refraction and diffraction of the incident wave must be considered. Surely, that would be a difficult subject.</p>
 <p>Theoretically, the inhomogeneous wave incident on the boundary of the medium will generate various surface waves.</p>
 <h3 id="component-of-the-surface-waves">Component of the surface waves</h3>
 <ul>
 <li><p>Rayleigh wave</p>
-<p><img src="/imgs/RayleighWave.jpg" title="Rayleigh wave"></p>
-<p>Fig. 4. The movement of a Rayleigh wave. (adapted from Wikipedia)</p></li>
+<p><img src="/imgs/Rayleigh_wave.gif" title="Rayleigh wave"></p>
+<p>Fig. 4. The movement of a Rayleigh wave. (adapted from <a href="https://www.quora.com/Which-seismic-wave-is-the-most-dangerous-Why" target="_blank" rel="noopener">quora</a>)</p></li>
 <li><p>Love wave</p>
-<p><img src="/imgs/LoveWave.jpg" title="Love wave"></p>
-<p>Fig. 5. The movement of a Love wave. (adapted from Wikipedia)</p></li>
+<p><img src="/imgs/Love_wave.gif" title="Love wave"></p>
+<p>Fig. 5. The movement of a Love wave. (adapted from <a href="https://www.quora.com/Which-seismic-wave-is-the-most-dangerous-Why" target="_blank" rel="noopener">quora</a>)</p></li>
 </ul>
+<h3 id="boundary-conditions-of-the-interface">Boundary conditions of the interface</h3>
+<p>The phenomena describing the reflection, refraction and diffraction of waves are related to the presence of inhomogeneities and interfaces. Knowledge of the corresponding boundary conditions is essential to correctly describe these phenomena. In fluid/fluid contacts in porous materials, we should expect fluid flow across the interface when a wave passes, and as we have mode conversion from P-wave to S-wave energy in single-phase media, we may expect mode conversion between the three waves propagating in a porous medium. In the developments that follow, the following different cases of the appropriate boundary conditions can be derived:</p>
+<ol type="1">
+<li>Porous medium/porous medium.</li>
+<li>Porous medium/viscoelastic single-phase medium.</li>
+<li>Porous medium/viscoacoustic medium (lossy fluid).</li>
+<li>Free surface of a porous medium.</li>
+</ol>
 <h2 id="conclusions">Conclusions</h2>
 <p>Although numerous investigations have been performed on wave propagations and motions of solid matrix and liquid in the pores, however, there is still a lack of comprehensive understanding on the mechanism of the technique and the mobilization of the fluids in the porous media under the mechanism of the technique and the mobilization of the fluids in the porous media under excitations of the wave motions generated with vibration stimulations.</p>
 <p>For further applications, a thorough and systemic study on wave propagations in fluid-saturated porous half-space media in is needed. The progress in such a study will certainly contribute to the comprehensive understanding of the mechanism of the technique and enhance its application.</p>
@@ -306,7 +326,7 @@
       <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction-of-porous-media"><span class="nav-number">1.</span> <span class="nav-text">Introduction of Porous Media</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#continuum-hypothesis-and-fractal-theories"><span class="nav-number">2.</span> <span class="nav-text">Continuum Hypothesis and Fractal Theories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wave-propagations-in-porous-media-full-space-domain"><span class="nav-number">3.</span> <span class="nav-text">Wave Propagations in Porous Media (full space domain)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#component-of-the-body-waves"><span class="nav-number">3.1.</span> <span class="nav-text">Component of the body waves</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wave-propagations-in-porous-media-half-space-domain"><span class="nav-number">4.</span> <span class="nav-text">Wave propagations in Porous Media half space domain</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#component-of-the-surface-waves"><span class="nav-number">4.1.</span> <span class="nav-text">Component of the surface waves</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conclusions"><span class="nav-number">5.</span> <span class="nav-text">Conclusions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reference"><span class="nav-number">6.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction-of-porous-media"><span class="nav-number">1.</span> <span class="nav-text">Introduction of Porous Media</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#continuum-hypothesis-and-fractal-theories"><span class="nav-number">2.</span> <span class="nav-text">Continuum Hypothesis and Fractal Theories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wave-propagations-in-porous-media-full-space-domain"><span class="nav-number">3.</span> <span class="nav-text">Wave Propagations in Porous Media (full space domain)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#component-of-the-body-waves"><span class="nav-number">3.1.</span> <span class="nav-text">Component of the body waves</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#biot-theory"><span class="nav-number">3.2.</span> <span class="nav-text">Biot theory</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wave-propagations-in-porous-media-half-space-domain"><span class="nav-number">4.</span> <span class="nav-text">Wave propagations in Porous Media half space domain</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#component-of-the-surface-waves"><span class="nav-number">4.1.</span> <span class="nav-text">Component of the surface waves</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#boundary-conditions-of-the-interface"><span class="nav-number">4.2.</span> <span class="nav-text">Boundary conditions of the interface</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conclusions"><span class="nav-number">5.</span> <span class="nav-text">Conclusions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reference"><span class="nav-number">6.</span> <span class="nav-text">Reference</span></a></li></ol></div>
           </div>
         </section>
       <!--/noindex-->
