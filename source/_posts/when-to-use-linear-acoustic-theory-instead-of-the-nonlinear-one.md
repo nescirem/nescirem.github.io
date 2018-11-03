@@ -74,7 +74,6 @@ P & = & p_0+c_{\infty}^2\rho{}+\frac{1}{2}\left(\frac{\partial{}^2P}{\partial{}\
 $$
 Here, $\tau{}_r$ is the relaxation time, $c_\infty$ is the sound speed when $\omega{}\tau{}_r \to \infty$, $m$ is a dimensionless parameter which describing the dispersion and dissipation characteristics of the medium.
 
-* * *
 # Linearization of the control equations
 
 It is well know that the *Helmholtz Equation* is derived from the nonlinear acoustic theories by serial hypothesis. The viscous effect, nonlinear effect, heatconduction effect and relaxation effect can be neglected under these assumptions.
@@ -124,13 +123,15 @@ $$
 
 ## When to use
 
-1. $\bm{Ma}<0.3$ , that means the total particle velocity is much smaller than sound velocity, the background medium is uncompressable (i.e., the mass density is uniform) and nearly stationary.
+1. $\bm{Ma}<0.3​$ , that means the total particle velocity is much smaller than sound velocity, the background medium is uncompressable (i.e., the mass density is uniform) and nearly stationary.
 2. $\mathcal{Re}\gg 1$ , that means the $\mu$ is neglectable small, the medium can be considered as an ideal fluid (i.e., the viscous effect can be neglect).
 3. $\bm{Re}\gg 1$ , that means the nonlinear effect and  heat conduction effect can be neglect (i.e., acoustic waves is much smaller disturbance then background medium and the propagation of the sound can be regard as an adiabatic process).
 
 If all 3 conditions are met and we can apply linear acoustic theories?
 
 No, the discussion of the relaxiation effect is needed.
+
+* * *
 
 # Reference
 

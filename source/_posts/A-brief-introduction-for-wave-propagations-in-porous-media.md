@@ -11,7 +11,7 @@ Most materials containing pores in them are considered as porous media and porou
 
 ![](/imgs/mainTypesOfPorousMedia.png "three main types of porous media")
 
-Fig.1. The three main types of porous media (referenced from Ref. 2)
+Fig.1. The three main types of porous media (Source: Ref. 2)
 
 With the significant development of the research and applications on porous media in recent years, the concept of porous media can be seen in applying in many areas of applied science and engineering. Wave propagations in porous media have great application significances in the areas of geophysics, earthquake, civil engineering, mechanical engineering, and petroleum engineering.
 
@@ -27,11 +27,11 @@ The main characteristics of fractal geometry are self-similar and scale invarian
 
 ![](/imgs/SierpinskiTriangle.png "Sierpinski triangle")
 
-Fig. 2. Sierpinski triangle (referenced from Wikipedia)
+Fig. 2. Sierpinski triangle (Source: Wikipedia)
 
 ![](/imgs/MengerSponge.jpg "Menger sponge")
 
-Fig. 3. Menger sponge (referenced from Wikipedia)
+Fig. 3. Menger sponge (Source: Wikipedia)
 
 Since the invention of fractal theory, it has been applied to investigate the transportation problem in porous media. The porosity and permeability of porous media may be related to the fractal index. 
 
@@ -75,13 +75,13 @@ Theoretically, the inhomogeneous wave incident on the boundary of the medium wil
 
   ![](/imgs/Rayleigh_wave.gif "Rayleigh wave")
 
-  Fig. 4. The movement of a Rayleigh wave. (referenced from [quora](https://www.quora.com/Which-seismic-wave-is-the-most-dangerous-Why))
+  Fig. 4. The movement of a Rayleigh wave. (Source: [quora](https://www.quora.com/Which-seismic-wave-is-the-most-dangerous-Why))
 
 - Love wave
 
   ![](/imgs/Love_wave.gif "Love wave")
 
-  Fig. 5. The movement of a Love wave. (referenced from [quora](https://www.quora.com/Which-seismic-wave-is-the-most-dangerous-Why))
+  Fig. 5. The movement of a Love wave. (Source: [quora](https://www.quora.com/Which-seismic-wave-is-the-most-dangerous-Why))
 
 ## Boundary conditions of the interface
 
@@ -97,6 +97,8 @@ The phenomena describing the reflection, refraction and diffraction of waves are
 Although numerous investigations have been performed on wave propagations and motions of solid matrix and liquid in the pores, however, there is still a lack of comprehensive understanding on the mechanism of the technique and the mobilization of the fluids in the porous media under the mechanism of the technique and the mobilization of the fluids in the porous media under excitations of the wave motions generated with vibration stimulations.
 
 For further applications, a thorough and systemic study on wave propagations in fluid-saturated porous half-space media in is needed. The progress in such a study will certainly contribute to the comprehensive understanding of the mechanism of the technique and enhance its application.
+
+* * *
 
 # Reference
 

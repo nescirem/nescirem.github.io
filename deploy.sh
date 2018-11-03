@@ -1,16 +1,16 @@
 hexo generate
 python3 yasuo.py
 git add .
-git commit -m "Source updated: %Y-%m-%d %H:%M:%S"
-git push origin source
+git commit -m "%Y-%m-%d %H:%M:%S Sources update"
+git push -u origin source:source
 cp -R public/* .deploy/nescirem.github.io
 cd .deploy/nescirem.github.io
 git add .
-git commit -m "Site updated: %Y-%m-%d %H:%M:%S"
+git commit -m "%Y-%m-%d %H:%M:%S Updated blog"
 git push origin master
 cd ~/blog-git/blog
 cp -R public/* .deploy/nescirem
 cd .deploy/nescirem
 git add .
-git commit -m "Site backuped: %Y-%m-%d %H:%M:%S"
+git commit -m "%Y-%m-%d %H:%M:%S Backuped"
 git push origin master
