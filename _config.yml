@@ -95,7 +95,7 @@ markdown_it_plus:
   langPrefix:
   linkify: true
   typographer:
-  quotes: “”‘’
+  quotes: “”''
   plugins:
     - plugin:
         name: markdown-it-katex
