@@ -5,7 +5,7 @@
 # Site
 title: NiSiC
 subtitle: 
-description: a Computational Acoustics leaner.
+description: a Computational Acoustics leaner
 keywords:
 author: Nescirem
 language: en
@@ -95,7 +95,7 @@ markdown_it_plus:
   langPrefix:
   linkify: true
   typographer:
-  quotes: “”''
+  quotes: “”‘’
   plugins:
     - plugin:
         name: markdown-it-katex
@@ -103,5 +103,3 @@ markdown_it_plus:
     - plugin:
         name: markdown-it-mark
         enable: false
-pandoc:
-  mathEngine: katex

@@ -7,7 +7,7 @@ katex: true
 
 # Equations of fluid dyanamics
 
-Acoustic waves are small propagating fluctuations in pressure, particle velocity, mass density, entropy and temperature on lager and more uniform background values of these quantities. Let $p_0,\bm{v}_0,\rho{}_0, s_0, T_0$ refer to the pressure, partical velocity, mass density, specific entropy density (i.e., entropy per unit mass), and absolute temperature of the background medium, respectively. Then, the total pressure $P$ , particle velocity $\boldsymbol{V}$ , mass density $\varGamma{}$ , specific entropy density $S$ , and absolute temperature $T$ associated with a propagating acoustic disturbance are assumed to be
+Acoustic waves are small propagating fluctuations in pressure, particle velocity, mass density, entropy and temperature on lager and more uniform background values of these quantities. Let $p_0,\bm{v}_0,\rho{}_0, s_0, T_0$ refer to the pressure, partical velocity, mass density, specific entropy density (i.e., entropy per unit mass), and absolute temperature of the background medium, respectively. Then, the total pressure $P$ , particle velocity $\bm{V}$ , mass density $\varGamma{}$ , specific entropy density $S$ , and absolute temperature $T$ associated with a propagating acoustic disturbance are assumed to be
 $$
 \begin{array}{rcl}
 \left\{ P,\bm{V},\varGamma,S,T \right\} & = & \left\{ p_0,\bm{v}_0,\rho{}_0,s_0,T_0 \right\} \\
@@ -31,13 +31,13 @@ Where the [*Material Derivative*](https://en.wikipedia.org/wiki/Material_derivat
 
 Movement Equation (or the Equation of momentum) can be derived from the _Newton's Second Law_ (without body force):
 $$
-\varGamma\frac{D\bm{V}}{Dt}=\nabla\mathbb{T}
+\varGamma\frac{D\bm{V}}{Dt}=\nabla{}\mathbb{T}
 $$
 Here $\mathbb{T}=\sigma{}_{ij}$ denotes the [Cauchy stress tensor](https://en.wikipedia.org/wiki/Cauchy_stress_tensor "refer to Wikipedia") - a second-order symmetric tensor consisted by 6 independent scalar variables.
 
 ## Constitutive Equation
 
-The Constitutive Equation explicitly relate the Cauchy stress tensor $\sigma{}_{ij}$, the normal stress vector components $P_i$ and the velocity vector component $U_i$. For isotropic _Newtonian fluid_, with the Volume viscosity inroduced by Stokes in 1949:
+The Constitutive Equation explicitly relate the Cauchy stress tensor $\sigma{}_{ij}$, the normal stress vector components $P_i$ and the velocity vector component $U_i$. For isotropic _Newtonian fluid_, with the Volume viscosity introduced by Stokes in 1949:
 $$
 \begin{cases}
 \sigma{}_{ij}=-P\delta{}_{ij}+T_{ij} \\
@@ -123,9 +123,9 @@ $$
 
 ## When to use
 
-1. $\bm{Ma}<0.3​$ , that means the total particle velocity is much smaller than sound velocity, the background medium is uncompressable (i.e., the mass density is uniform) and nearly stationary.
-2. $\mathcal{Re}\gg 1$ , that means the $\mu$ is neglectable small, the medium can be considered as an ideal fluid (i.e., the viscous effect can be neglect).
-3. $\bm{Re}\gg 1$ , that means the nonlinear effect and  heat conduction effect can be neglect (i.e., acoustic waves is much smaller disturbance then background medium and the propagation of the sound can be regard as an adiabatic process).
+1. $\bm{Ma}<0.3$ , that means the total particle velocity is much smaller than sound velocity, the background medium is uncompressable (i.e., the mass density is uniform) and nearly stationary.
+2. $\mathcal{Re}\gg{}1$ , that means the $\mu$ is neglectable small, the medium can be considered as an ideal fluid (i.e., the viscous effect can be neglect).
+3. $\bm{Re}\gg{}1$ , that means the nonlinear effect and  heat conduction effect can be neglect (i.e., acoustic waves is much smaller disturbance then background medium and the propagation of the sound can be regard as an adiabatic process).
 
 If all 3 conditions are met and we can apply linear acoustic theories?
 
