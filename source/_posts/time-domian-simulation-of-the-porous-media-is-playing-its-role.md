@@ -2,12 +2,11 @@
 title: Time-domian simulation of the sound propagation in porous medium is playing its role
 date: 2018-11-21 19:47:57
 tags: [porous media, time domain simulation]
-katex: true
 ---
 
-The porous medium is widely used as the sound-absorbing materials in the field of noise and vibration control due to their low weight, low price and effectiveness. This fact drives the development of acoustic performance prediction for a porous media. To accurately predict the acoustic performance of acoustic equipment or the noise in the open sound field, acoustic numerical simulation technology has emerged and developed rapidly, especially after the great step forwarding of the High Performance Computing & Simulation (HPCS).
+The porous medium is widely used as the sound-absorbing materials in the field of noise and vibration control due to their low weight, low price, and effectiveness. The fact drives the development of acoustic performance prediction for the porous medium. To accurately predict the acoustic performance of acoustic equipment or the noise in the open sound field, acoustic numerical simulation technology has emerged and developed rapidly in the past few decades, especially after the great step forwarding of the High-Performance Computing & Simulation (HPCS).
 
-Since the air density is always far little than the frame density of the porous medium in acoustic control, the frame of the porous medium can be seen as motionless. Such medium was called rigid skeleton porous medium. Special attention has been paid to the propagation of the monochromatic sound wave in the rigid skeleton porous medium. That is because the response of a porous media in the time domain can be described by an instantaneous response and a "susceptibility" kernel responsible for the memory effects. Various empirical and semi-phenomenological models were developed for the describing of the wave propagation in the porous medium. Tab. 1 lists 14 impedance models and the parameters on which they depend.
+Since the fluid density is always smaller than the frame density in the porous medium, the frame of the porous medium can be seen as motionless (i.e., rigid skeleton porous medium). Special attention has been paid to the propagation of the monochromatic sound wave in the rigid skeleton porous medium. That is because the response of a porous media in the time domain can be described by an instantaneous response and a "susceptibility" kernel responsible for the memory effects. Various empirical and semi-phenomenological models were developed for the describing of the wave propagation in the porous medium. Tab. 1 lists 14 impedance models and the parameters on which they depend.
 
 Tab.1 Impedance models and parameters (adapted from Ref.2). 
 
@@ -61,8 +60,23 @@ $$
 
 Here, $\tilde{\rho}_{eq}$ is the equivalent density, $\tilde{K}_{eq}$ is the equivalent bulk modulus, they are complex functions of the frequency and of the pore shape. 
 
-As a matter of fact, it is not only the Wilson relaxation model that describes the acoustic propagation of the porous medium in the time-domain. Zwikker & Kosten(1949) has given a time-domain phenomenological model describing the sound propagating in the porous medium:
+```
+engypted (;P):
+那么，时域法与频域法仿真多孔介质声传播有什么区别吗，或者说相对与频域法而言时域法仿真的优势体现在哪里？这里简单地总结一下（当然本人能力有限，总结的不一定对）：
 
+× 频域法：
+  * 优点：
+    各个单频声求解相互独立，能够较为方便地处理成并行计算；
+    控制方程相对简单，相应计算程序的鲁棒性能得到保证；
+  * 缺点：
+    以单频声的线性叠加描述多孔介质声传播，不能很好的反映多孔介质的非线性效应。
+    有限元仿真计算耗费算力大
+× 时域法：
+  * 优点：
+  
+```
+
+As a matter of fact, it is not only the Wilson relaxation model that describes the acoustic propagation of the porous medium in the time-domain. Zwikker & Kosten(1949) has given a time-domain phenomenological model describing the sound propagating in the porous medium:
 $$
 \sigma\bm{v}+\frac{k_s\rho{}_0}{\phi}\frac{\partial\bm{v}}{\partial{}t}=-\nabla{}p
 $$

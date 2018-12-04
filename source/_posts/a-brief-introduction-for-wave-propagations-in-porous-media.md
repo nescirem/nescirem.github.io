@@ -1,7 +1,7 @@
 ---
 title: A brief introduction for wave propagations in porous media
 date: 2018-10-26 19:54:39
-tags: [porous media,introduction,fractal theories] 
+tags: [porous media,acoustic material,fractal theories] 
 ---
 
 
