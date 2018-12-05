@@ -25,8 +25,8 @@ Tab.1 Impedance models and parameters (adapted from Ref.2).
 | Pore size distribution       |         4         | Porosity, flow resistivity, tortuosity, distribution parameter |
 | Johnson/Allard/Umnova        |         4         | Porosity, flow resistivity, tortuosity, viscous characteristic lengh |
 | Johnson/Allard               |         5         | Porosity, flow resistivity, tortuosity, viscous, thermal characteristic lengths |
-| Johnson/Allard/Lafarge       |         6         | Porosity, flow resistivity, tortuosity, viscous and thermal characteristic lengths, thermal permeability |
-| Johnson/Allard/Lafarge/Pride |         8         | Porosity, flow resistivity, tortuosity, viscous and thermal characteristic lengths, thermal permeability, viscous and thermal tortuosity correction factor |
+| Johnson/Allard/Lafarge       |         6         | Porosity, flow resistivity, tortuosity, viscous and thermal characteristic lengths,<br />thermal permeability |
+| Johnson/Allard/Lafarge/Pride |         8         | Porosity, flow resistivity, tortuosity, viscous and thermal characteristic lengths,<br />thermal permeability, viscous and thermal tortuosity correction factor |
 
 Researchers found that the asymptotic expressions of stiffness and damping in porous medium are proportional to fractional powers of frequency which suggests the fact that time derivatives of fractional order might describe the behavior of the sound waves in this kind of material. Therefore, the time domain expression of sound propagation in porous medium often contains convolution expressions, which makes it difficult for the numerical simulation of the acoustic propagation of porous medium. For example, the Wilson relaxation model can be expressed as:
 
@@ -61,7 +61,7 @@ $$
 Here, $\tilde{\rho}_{eq}$ is the equivalent density, $\tilde{K}_{eq}$ is the equivalent bulk modulus, they are complex functions of the frequency and of the pore shape. 
 
 ```
-engypted (;P):
+encrypted (;P):
 那么，时域法与频域法仿真多孔介质声传播有什么区别吗，或者说相对与频域法而言时域法仿真的优势体现在哪里？这里简单地总结一下（当然本人能力有限，总结的不一定对）：
 
 × 频域法：
