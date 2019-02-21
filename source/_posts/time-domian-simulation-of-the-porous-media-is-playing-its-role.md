@@ -28,8 +28,9 @@ Tab.1 Impedance models and parameters (adapted from Ref.2).
 | Johnson/Allard/Lafarge       |         6         | Porosity, flow resistivity, tortuosity, viscous and thermal characteristic lengths,<br />thermal permeability |
 | Johnson/Allard/Lafarge/Pride |         8         | Porosity, flow resistivity, tortuosity, viscous and thermal characteristic lengths,<br />thermal permeability, viscous and thermal tortuosity correction factor |
 
-Researchers found that the asymptotic expressions of stiffness and damping in porous medium are proportional to fractional powers of frequency which suggests the fact that time derivatives of fractional order might describe the behavior of the sound waves in this kind of material. Therefore, the time domain expression of sound propagation in porous medium often contains convolution expressions, which makes it difficult for the numerical simulation of the acoustic propagation of porous medium. For example, the Wilson relaxation model can be expressed as:
+<!--more-->
 
+Researchers found that the asymptotic expressions of stiffness and damping in porous medium are proportional to fractional powers of frequency which suggests the fact that time derivatives of fractional order might describe the behavior of the sound waves in this kind of material. Therefore, the time domain expression of sound propagation in porous medium often contains convolution expressions, which makes it difficult for the numerical simulation of the acoustic propagation of porous medium. For example, the Wilson relaxation model can be expressed as:
 $$
 \frac{\bm{v}}{\tau{}_{vor}}+\frac{\partial{}\bm{v}}{\partial{}t}+A(t)=-V_{\infty{}}\nabla{}p
 $$

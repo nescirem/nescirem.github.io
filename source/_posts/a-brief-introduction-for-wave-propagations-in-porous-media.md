@@ -56,12 +56,20 @@ Biot theory describes the elastic waves propagation in a porous saturated medium
 The main assumptions of the theory are:
 
 1. Infinitesimal transformations occur between the reference and current states of deformation. Displacements, strains and particle velocities are small. Consequently, the Eulerian and Lagrangian formulations coincide up to the first-order. The constitutive equations, dissipation forces, and kinetic momenta are linear. (The strain energy, dissipation potential and kinetic energy are quadratic forms in the field variables.)
+
 2. The principles of continuum mechanics can be applied to measurable macroscopic values. The macroscopic quantities used in Biot's theory are volume averages of the corresponding microscopic quantities of the constituents.
+
 3. The wavelength is large compared with the dimensions of a macroscopic elementary volume. This volume has well defined properties, such as porosity, permeability and elastic moduli, which are representative of the medium. Scattering effects are thus neglected.
+
 4. The conditions are isothermal.
+
 5. The stress distribution in the fluid is hydrostatic. (It may be not completely hydrostatic, since the fluid is viscous.)
+
 6. The liquid phase is continuous. The matrix consists of the solid phase and disconnected pores, which do not contribute to the porosity.
+
 7. In most cases, the material of the frame is isotropic. Anisotropy is due to a preferential alignment of the pores (or cracks).
+
+<!--more-->
 
 # Wave propagations in  Porous Media half space domain
 
