@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://nisic.tech/"/>
-  <updated>2019-02-21T13:30:08.377Z</updated>
+  <updated>2019-02-21T13:58:33.591Z</updated>
   <id>http://nisic.tech/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A Time-domain Finite Volume Method approach for the Simulation of Sound Propagation in Porous Half-Space Medium</title>
+    <link href="http://nisic.tech/2019/a-time-domain-finite-volume-method-approach-for-the-simulation-of-sound-propagation-in-porous-half-space-medium/"/>
+    <id>http://nisic.tech/2019/a-time-domain-finite-volume-method-approach-for-the-simulation-of-sound-propagation-in-porous-half-space-medium/</id>
+    <published>2019-02-21T13:42:59.000Z</published>
+    <updated>2019-02-21T13:58:33.591Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h1><p>A time-domain finite volume method solver was developed for the simulation of wave propagation in porous media, in which the variables is vertex-centered arrangement and the solver is based on Zwikker and Kosten(ZK) Model. The boundary condition between porous media and non-viscous fluid was discussed. This approach is validated by serial numerical results.</p><h1 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h1><p>Sound propagation in porous media is an enduring topics in the file of the acoustic control due to it&#x2019;s cheap and efficiency. They are used in a variety of locations - close to source of noise, in various paths, and sometimes close to receivers. The finite volume method is usually been used in fluid dynamics, During the last two decades, with the rapidly development of the high performance computer, the time-domain simulation of the porous media has been a reborn interest. In this paper, only the sound pressure was calculated both in the air and in the material. The paper is organised as follows:</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;abstract&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#abstract&quot;&gt;&lt;/a&gt; Abstract&lt;/h1&gt;
+&lt;p&gt;A time-domain finite volume method solver was develope
+      
+    
+    </summary>
+    
+    
+      <category term="porous media" scheme="http://nisic.tech/tags/porous-media/"/>
+    
+      <category term="finite volume method" scheme="http://nisic.tech/tags/finite-volume-method/"/>
+    
+      <category term="numerical simulation" scheme="http://nisic.tech/tags/numerical-simulation/"/>
+    
+  </entry>
   
   <entry>
     <title>The measurement methods of acoustic material properties</title>
