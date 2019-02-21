@@ -48,7 +48,7 @@ $$
 
 Here, $\beta{}_\infty{}=\phi{}/P_0\gamma{}$, $V_{\infty{}}=\phi{}/\varGamma{}\alpha{}_\infty{}$, $\tau{}_{vor}=2\varGamma{}\alpha{}_\infty{}/ \sigma{}\phi{}$, $\tau{}_{ent}=N_{Pr}s_{B}^{2}\tau{}_{vor}$, $\phi{}$ is the porosity, $\alpha_\infty{}$ is the tortuosity, $\varGamma{}$ is the ambient air density. $P$ is the ambient air pressure, $\gamma{}$ is the ratio of specific heats, $N_{Pr}$ is the Prandtl number and $s_B$ is the pore shape factor. For more details about those parameters one can refer to Ref.3.
 
-The description of sound propagation in the porous medium is often "frequency domain" in commercial software. Though the "frequency domain" argument here is not rigorous. These commercial software solutions are time domain governing equations, but these equations describing for monochromatic sounds, and the coefficients in it are frequency dependent. i.e. Zwikker and Kosten model:
+The description of sound propagation in the porous medium is often "frequency domain" in commercial software. Though the "frequency domain" argument here is not rigorous. These commercial software solutions are time domain governing equations, but these equations describing monochromatic sounds, and the coefficients in it are frequency dependent. i.e. Zwikker and Kosten model:
 
 $$
 -\nabla{}p=\tilde{\rho}_{eq}\frac{\partial{}\bm{v}}{\partial{}t}
@@ -58,22 +58,15 @@ $$
 -\nabla\cdot\bm{v}=\frac{1}{\tilde{K}_{eq}}\frac{\partial{}p}{\partial{}t}
 $$
 
-Here, $\tilde{\rho}_{eq}$ is the equivalent density, $\tilde{K}_{eq}$ is the equivalent bulk modulus, they are complex functions of the frequency and of the pore shape. 
+Here, $\tilde{\rho}_{eq}$ is the equivalent density, $\tilde{K}_{eq}​$ is the equivalent bulk modulus, they are complex functions of the frequency and of the pore shape.
 
 ```
-encrypted (;P):
-那么，时域法与频域法仿真多孔介质声传播有什么区别吗，或者说相对与频域法而言时域法仿真的优势体现在哪里？这里简单地总结一下（当然本人能力有限，总结的不一定对）：
-
-× 频域法：
-  * 优点：
-    各个单频声求解相互独立，能够较为方便地处理成并行计算；
-    控制方程相对简单，相应计算程序的鲁棒性能得到保证；
-  * 缺点：
-    以单频声的线性叠加描述多孔介质声传播，不能很好的反映多孔介质的非线性效应。
-    有限元仿真计算耗费算力大
-× 时域法：
-  * 优点：
-  
+× Frequency domain：
+    The solution of each single-frequency is independent of each other which means the program can be easily processed into parallel computing.
+    The control equation is relatively simple, Correspondingly, the robustness of the calculation program is guaranteed.
+× Time domain：
+    the short time reliable solution of the pulse sound field can be obtained.
+  	
 ```
 
 As a matter of fact, it is not only the Wilson relaxation model that describes the acoustic propagation of the porous medium in the time-domain. Zwikker & Kosten(1949) has given a time-domain phenomenological model describing the sound propagating in the porous medium:
