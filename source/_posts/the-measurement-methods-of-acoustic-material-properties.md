@@ -88,32 +88,23 @@ For most practitioners, the only important measurement is that which gives the r
 
 ## reverberation room
 
-The reverberation chamber test requires large sample sizes and a specialist test
-room, and so is expensive to undertake. It also only gives absorption coefficients; the
-impedance cannot be measured. Consequently, developers of absorptive material will
-often use the impedance tube to build up an understanding of the material properties
-on small samples, before undertaking reverberation tests.
+The reverberation chamber test requires large sample sizes and a specialist test room, and so is expensive to undertake. It also only gives absorption coefficients; the impedance cannot be measured. Consequently, developers of absorptive material will often use the impedance tube to build up an understanding of the material properties on small samples, before undertaking reverberation tests.
 
-The reverberation time of a room is dependent on the total absorption in the room. Consequently, by measuring the reverberation time of a room
-before and after a sample of absorbent is introduced, it is possible to calculate the
-random incidence absorption coefficient.
+The reverberation time of a room is dependent on the total absorption in the room. Consequently, by measuring the reverberation time of a room before and after a sample of absorbent is introduced, it is possible to calculate the random incidence absorption coefficient.
 
 The reverberation time before the sample is introduced is given by:
 $$
 T_0=\frac{55.3V}{c_0\alpha_0S+4Vm_1}
 \tag{9}
 $$
-where $V$ is the room volume, $c_0$ is the speed of sound, $\alpha_0$ is the average absorption
-coefficient of the empty room, $S$ is the surface area of the room and $m_1​$ is the air absorption constant.
+where $V$ is the room volume, $c_0$ is the speed of sound, $\alpha_0$ is the average absorption coefficient of the empty room, $S$ is the surface area of the room and $m_1$ is the air absorption constant.
 
 The reverberation time after the sample is introduced is given by:
 $$
 T_1=\frac{55.3V}{c_0\left(\alpha_0\left[S-S_s\right]+\alpha_sS_s\right)+4Vm_1}
 \tag{10}
 $$
-where $S_s$ is the surface area and $\alpha_s$ is the absorption coefficient of the sample. By
-rearranging Equations $(9)$ and $(10)$ it is possible to obtain the absorption coefficient
-of the sample.
+where $S_s$ is the surface area and $\alpha_s$ is the absorption coefficient of the sample. By rearranging Equations $(9)$ and $(10)$ it is possible to obtain the absorption coefficient of the sample.
 
 # Reference
 
