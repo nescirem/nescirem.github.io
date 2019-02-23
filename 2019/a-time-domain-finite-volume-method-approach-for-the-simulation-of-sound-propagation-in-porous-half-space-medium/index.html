@@ -36,18 +36,18 @@
   };
 </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
-  <meta name="description" content="Abstract A time-domain finite volume method solver was developed for the simulation of wave propagation in porous media, in which the variables is vertex-centered arrangement and the solver is based">
+  <meta name="description" content="A time-domain finite volume method solver was developed for the simulation of wave propagation in porous media, in which the variables is vertex-centered arrangement and the solver is based on Zwikker">
 <meta name="keywords" content="porous media,finite volume method,numerical simulation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A Time-domain Finite Volume Method approach for the Simulation of Sound Propagation in Porous Half-Space Medium">
 <meta property="og:url" content="http://nisic.tech/2019/a-time-domain-finite-volume-method-approach-for-the-simulation-of-sound-propagation-in-porous-half-space-medium/index.html">
 <meta property="og:site_name" content="NiSiC">
-<meta property="og:description" content="Abstract A time-domain finite volume method solver was developed for the simulation of wave propagation in porous media, in which the variables is vertex-centered arrangement and the solver is based">
+<meta property="og:description" content="A time-domain finite volume method solver was developed for the simulation of wave propagation in porous media, in which the variables is vertex-centered arrangement and the solver is based on Zwikker">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-21T13:58:33.591Z">
+<meta property="og:updated_time" content="2019-02-23T15:53:04.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A Time-domain Finite Volume Method approach for the Simulation of Sound Propagation in Porous Half-Space Medium">
-<meta name="twitter:description" content="Abstract A time-domain finite volume method solver was developed for the simulation of wave propagation in porous media, in which the variables is vertex-centered arrangement and the solver is based">
+<meta name="twitter:description" content="A time-domain finite volume method solver was developed for the simulation of wave propagation in porous media, in which the variables is vertex-centered arrangement and the solver is based on Zwikker">
   <link rel="alternate" href="/atom.xml" title="NiSiC" type="application/atom+xml">
   <link rel="canonical" href="http://nisic.tech/2019/a-time-domain-finite-volume-method-approach-for-the-simulation-of-sound-propagation-in-porous-half-space-medium/">
 <script type="text/javascript" id="page.configurations">
@@ -150,7 +150,13 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
                 <span class="post-meta-item-text">Posted on</span>
-              <time title="Created: 2019-02-21 21:42:59 / Modified: 21:58:33" itemprop="dateCreated datePublished" datetime="2019-02-21T21:42:59+08:00">2019-02-21</time>
+              <time title="Created: 2019-02-21 21:42:59" itemprop="dateCreated datePublished" datetime="2019-02-21T21:42:59+08:00">2019-02-21</time>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                  <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-02-23 23:53:04" itemprop="dateModified" datetime="2019-02-23T23:53:04+08:00">2019-02-23</time>
           </span>
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
@@ -164,10 +170,29 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-        <h1 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h1>
-<p>A time-domain finite volume method solver was developed for the simulation of wave propagation in porous media, in which the variables is vertex-centered arrangement and the solver is based on Zwikker and Kosten(ZK) Model. The boundary condition between porous media and non-viscous fluid was discussed. This approach is validated by serial numerical results.</p>
+        <p>A time-domain finite volume method solver was developed for the simulation of wave propagation in porous media, in which the variables is vertex-centered arrangement and the solver is based on Zwikker and Kosten(ZK) Model. The boundary condition between porous media and non-viscous fluid was discussed. This approach is validated by serial numerical results.</p>
 <h1 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h1>
-<p>Sound propagation in porous media is an enduring topics in the file of the acoustic control due to it&#x2019;s cheap and efficiency. They are used in a variety of locations - close to source of noise, in various paths, and sometimes close to receivers. The finite volume method is usually been used in fluid dynamics, During the last two decades, with the rapidly development of the high performance computer, the time-domain simulation of the porous media has been a reborn interest. In this paper, only the sound pressure was calculated both in the air and in the material. The paper is organised as follows:</p>
+<p>Sound propagation in porous medium is an enduring topics in the file of the acoustic control due to it&#x2019;s cheap and efficiency. They are used in a variety of locations - close to source of noise, in various paths, and sometimes close to receivers.<sup>1</sup> Unlike frequency-domain acoustic simulation which was widely used today, time-domain simulation can provides much more information that help one understand the propagation process of a sound pulse. During the last two decades, the time-domain simulation of the porous media has been a reborn interest with the development of applications like medical imaging or sound crystals require the study of the sound propagation in the porous medium.<sup>2-8</sup></p>
+<p>Serial time-domain numerical techniques have been developed to study sound propagation in porous medium, Most of them use finite-difference time-domain (FDTD) algorithms.<sup>9-12</sup> But there is one shortcoming that cannot be ignored that FDTD need additional process - such as immersed-boundary (IB) - to adapt to the simulation of objects with complicated geometry.The finite volume method is widely used in fluid dynamics due to it&#x2019;s strictly  conservative and can be formulated on unstructured meshes.<sup>13</sup> Xuan et al. has developed an acoustic propagation simulator by time-domain finite volume method.<sup>14</sup> In this paper, we extend the algorithm to calculate acoustic propagation in porous medium using the ZK model.</p>
+<p>The paper is organised as follows: Section 2 presents the equations and limitations of ZK model. The detail schemes of the discretization of equations are described in Section 3. Example calculations and comparison are provided in Section 4. A triangle porous barrier and two sonic crystals are used to test the numerical methods.</p>
+<h1 id="model-equations-and-limitation"><a class="markdownIt-Anchor" href="#model-equations-and-limitation"></a> Model equations and limitation</h1>
+<h1 id="numerical-schemes"><a class="markdownIt-Anchor" href="#numerical-schemes"></a> Numerical schemes</h1>
+<h1 id="simulation-results-and-discussion"><a class="markdownIt-Anchor" href="#simulation-results-and-discussion"></a> Simulation results and discussion</h1>
+<h1 id="reference"><a class="markdownIt-Anchor" href="#reference"></a> Reference</h1>
+<p>[1] Arenas, Jorge P., and Malcolm J. Crocker. &#x201C;Recent trends in porous sound-absorbing materials.&#x201D; <em>Sound &amp; vibration</em> 44.7 (2010): 12-18.</p>
+<p>[2] Bouakaz, Ayache, Charles T. Lanc&#xE9;e, and Nico de Jong. &#x201C;Harmonic ultrasonic field of medical phased arrays: Simulations and measurements.&#x201D; IEEE transactions on ultrasonics, ferroelectrics, and frequency control 50.6 (2003): 730-735.</p>
+<p>[3] Hallaj, Ibrahim M., and Robin O. Cleveland. &#x201C;FDTD simulation of finite-amplitude pressure and temperature fields for biomedical ultrasound.&#x201D; The Journal of the Acoustical Society of America 105.5 (1999): L7-L12.</p>
+<p>[4] Jian, X. Q., et al. &#x201C;FDTD simulation of nonlinear ultrasonic pulse propagation in ESWL.&#x201D; 2005 IEEE Engineering in Medicine and Biology 27th Annual Conference. IEEE, 2006.</p>
+<p>[5] Fellah, Z. E. A., and C. Depollier. &#x201C;Transient acoustic wave propagation in rigid porous media: A time-domain approach.&#x201D; The Journal of the Acoustical Society of America 107.2 (2000): 683-688.</p>
+<p>[6] Miyashita, Toyokatsu, and Chiryu Inoue. &#x201C;Numerical investigations of transmission and waveguide properties of sonic crystals by finite-difference time-domain method.&#x201D; Japanese Journal of Applied Physics 40.5S (2001): 3488.</p>
+<p>[7] Hu, Xinhua, C. T. Chan, and Jian Zi. &#x201C;Two-dimensional sonic crystals with Helmholtz resonators.&#x201D; Physical Review E 71.5 (2005): 055601.</p>
+<p>[8] Ke, Guoyi, and Zhongquan Charlie Zheng. &#x201C;Sound propagation around arrays of rigid and porous cylinders in free space and near a ground boundary.&#x201D; Journal of Sound and Vibration 370 (2016): 43-53.</p>
+<p>[9] Salomons, Erik M., Reinhard Blumrich, and Dietrich Heimann. &#x201C;Eulerian time-domain model for sound propagation over a finite-impedance ground surface. Comparison with frequency-domain models.&#x201D; Acta Acustica united with Acustica 88.4 (2002): 483-492.</p>
+<p>[10] Wilson, D. Keith, et al. &#x201C;Time-domain calculations of sound interactions with outdoor ground surfaces.&#x201D; Applied Acoustics 68.2 (2007): 173-200.</p>
+<p>[11] Van Renterghem, Timothy, Dick Botteldooren, and Kris Verheyen. &#x201C;Road traffic noise shielding by vegetation belts of limited depth.&#x201D; Journal of Sound and Vibration 331.10 (2012): 2404-2425.</p>
+<p>[12] Ke, Guoyi, and Zhongquan Charlie Zheng. &#x201C;Simulation of sound propagation over porous barriers of arbitrary shapes.&#x201D; The Journal of the Acoustical Society of America 137.1 (2015): 303-309.</p>
+<p>[13] Moukalled, F., L. Mangani, and M. Darwish. &#x201C;The finite volume method in computational fluid dynamics.&#x201D; An Advanced Introduction with OpenFOAM and Matlab (2016): 3-8.</p>
+<p>[14] Xuan, Ling-kuan, et al. &#x201C;Time domain finite volume method for three-dimensional structural&#x2013;acoustic coupling analysis.&#x201D; Applied Acoustics 76 (2014): 138-149.</p>
     </div>
     <footer class="post-footer">
         <div class="post-tags">
@@ -257,7 +282,7 @@
       <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#abstract"><span class="nav-number">1.</span> <span class="nav-text"> Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction"><span class="nav-number">2.</span> <span class="nav-text"> Introduction</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction"><span class="nav-number">1.</span> <span class="nav-text"> Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#model-equations-and-limitation"><span class="nav-number">2.</span> <span class="nav-text"> Model equations and limitation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#numerical-schemes"><span class="nav-number">3.</span> <span class="nav-text"> Numerical schemes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#simulation-results-and-discussion"><span class="nav-number">4.</span> <span class="nav-text"> Simulation results and discussion</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reference"><span class="nav-number">5.</span> <span class="nav-text"> Reference</span></a></li></ol></div>
           </div>
         </section>
       <!--/noindex-->
