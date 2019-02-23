@@ -86,7 +86,7 @@ This method is essentially an adaptation of the transfer function method. It usu
 
 For most practitioners, the only important measurement is that which gives the random incidence absorption coefficient that is needed for performance specifications in room designing, vegetation belt setting, and so on.
 
-## reverberation room
+## Reverberation room
 
 The reverberation chamber test requires large sample sizes and a specialist test room, and so is expensive to undertake. It also only gives absorption coefficients; the impedance cannot be measured. Consequently, developers of absorptive material will often use the impedance tube to build up an understanding of the material properties on small samples, before undertaking reverberation tests.
 
