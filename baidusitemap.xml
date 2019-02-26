@@ -2,7 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://nisic.tech/2019/a-time-domain-finite-volume-method-approach-for-the-simulation-of-sound-propagation-in-porous-half-space-medium/</loc>
-    <lastmod>2019-02-25T13:46:17.271Z</lastmod>
+    <lastmod>2019-02-26T14:35:13.782Z</lastmod>
+  </url>  <url>
+    <loc>http://nisic.tech/2018/when-to-use-linear-acoustic-theory-instead-of-the-nonlinear-one/</loc>
+    <lastmod>2019-02-26T06:36:39.745Z</lastmod>
   </url>  <url>
     <loc>http://nisic.tech/2018/the-measurement-methods-of-acoustic-material-properties/</loc>
     <lastmod>2019-02-25T13:12:43.368Z</lastmod>
@@ -15,8 +18,5 @@
   </url>  <url>
     <loc>http://nisic.tech/2018/hello-world/</loc>
     <lastmod>2018-12-05T03:22:52.607Z</lastmod>
-  </url>  <url>
-    <loc>http://nisic.tech/2018/when-to-use-linear-acoustic-theory-instead-of-the-nonlinear-one/</loc>
-    <lastmod>2018-11-29T03:58:34.306Z</lastmod>
   </url>
 </urlset>
