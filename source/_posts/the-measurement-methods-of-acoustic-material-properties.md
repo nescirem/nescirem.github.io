@@ -1,7 +1,7 @@
 ---
 title: The measurement methods of acoustic material properties
 date: 2018-12-04 19:09:11
-tags: [porous media,acoustic material,acoustic measurement] 
+tags: [porous materials,acoustic measurement] 
 ---
 
 Just acoustic materials, no acoustic construction here (i.e., structural sound insulation). acoustic properties only, no internal properties of porous media.

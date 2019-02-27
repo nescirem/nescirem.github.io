@@ -1,7 +1,7 @@
 ---
 title: A Time-domain Finite Volume Method approach for the Simulation of Sound Propagation in Porous Half-Space Medium
 date: 2019-02-21 21:42:59
-tags: [porous media,finite volume method,numerical simulation]
+tags: [porous materials,finite volume method,numerical simulation]
 ---
 
 A time-domain finite volume method solver was developed for the simulation of wave propagation in porous media, in which the variables is vertex-centered arrangement and the solver is based on Zwikker and Kosten(Z-K) Model. The boundary condition between porous media and non-viscous fluid was discussed. This approach is validated by serial numerical results.
@@ -37,7 +37,7 @@ $$
 \tag{2}
 $$
 
-It is well known that the Wilson Model fits well with the empirical parameters of the porous medium acoustic characters. Figs.1-2 compare predictions from the Z-K and Wilson Models for the impedance $Z$ and the phase speed $c=\omega{}Re[\Gamma]$ when low frequency approximate values were used for the parameters of Z-K Model. The results are plotted as a function of the normalized frequency $\omega{}\tau_v$. More details on how the comparisons between the Wilson Model and Z-K Model were made can be found in Ref.11. The parameter values chosen for these comparisons are $\sigma=2000$, $\phi=0.3$, $k_s=3$, $c_0=340$, $\rho=1.226$, $N_{Pr}=1$, and $s_B=1$.
+It is well known that the Wilson Model fits well with the empirical parameters of the porous medium acoustic characters. Figs.1-2 compare predictions from the Z-K and Wilson Models for the impedance $Z​$ and the phase speed $c=\omega{}Re[\Gamma]​$ when low frequency approximate values were used for the parameters of Z-K Model. The results are plotted as a function of the normalized frequency $\omega{}\tau_v​$. More details on how the comparisons between the Wilson Model and Z-K Model were made can be found in Ref.11. The parameter values chosen for these comparisons are $\sigma=2000\ Pa\cdot{}s\cdot{}m^{-2}​$, $\phi=0.3​$, $k_s=3​$, $c_0=340\ m/s​$, $\rho=1.226\ kg/m^3​$, $N_{Pr}=1​$, and $s_B=1​$.
 
 ![ComparisonNormalizedImpedance](/imgs/ComparisonNormalizedImpedance_L.png)
 
@@ -94,7 +94,7 @@ $$
 g_k\frac{\partial^2p}{\partial{}t^2}+c_k\frac{\partial{}p}{\partial{}t}=\sum_{i=1}^{nc}{\int_{\varGamma{}_i}\left(\nabla{}p\cdot\bm{n}\right)d\varGamma}
 \tag{6}
 $$
-In which $g_k=\sum_{i=1}^{nc}{a_iS_i}$, $c_k=\sum_{i=1}^{nc}{b_iS_i}$, and $S_i$ refers to the contribution of the area (2-D) or volume (3-D) to that node by the cell (element).
+in which $g_k=\sum_{i=1}^{nc}{a_iS_i}$, $c_k=\sum_{i=1}^{nc}{b_iS_i}$, and $S_i$ refers to the contribution of the area (2-D) or volume (3-D) to that node by the cell.
 
 ![VC-FVM_dotPressureDistribution](/imgs/VC-FVM_dotPressureDistribution.png)
 
@@ -102,13 +102,12 @@ Fig.7. The distribution of sound pressure change rate over time which assumed in
 
 We use shape function to calculate the grade of the pressure in the cell，the right side of $Eq. 6$ can be rewritten as
 $$
-\sum_{i=1}^{nc}{\int_{\varGamma{}_i}\left(\nabla{}p\cdot\bm{n}\right)d\varGamma}\\
+\sum_{i=1}^{nc}{\int_{\varGamma{}_i}\left(\nabla{}p\cdot\bm{n}\right)d\varGamma} \\
 =\sum_{i=1}^{nc}\sum_{j=1}^{ncn}{\left(\frac{\partial{}N_j}{\partial{}x}p_j,\frac{\partial{}N_j}{\partial{}y}p_j\right)}\cdot\int_{\varGamma_i}\bm{n}d\varGamma
 \tag{7}
 $$
-Where, $\frac{\partial{}N_j}{\partial{}x}$ and $\frac{\partial{}N_j}{\partial{}y}$ are the shape function of the cell, the value is dependent on the cell shape.
+where, $\frac{\partial{}N_j}{\partial{}x}$ and $\frac{\partial{}N_j}{\partial{}y}$ are the shape function of the cell, the value is dependent on the cell shape. In practice, we discrete the time term as
 
-In practice, we discrete the time term as
 $$
 \begin{array}{lcl}
 \frac{\partial^2p}{\partial{}t^2}=\frac{p^{t+\Delta{}t}-2p^t+p^{t-\Delta{}t}}{\Delta{}t^2}\\
@@ -119,11 +118,69 @@ $$
 
 # Simulation results
 
+We recalculated a triangle porous barrier given in Ref.13 and the sonic crystals in Ref.9 to test our program. And have made sure that parameter values are the same as each source case, the number of grids in VC-FVM is similar to there source cases.
 
+## single triangle barrier
 
-![SoundLine](/imgs/SoundLine.jpg)
+The Gaussian source was applied as the initial condition, with an expression of
+$$
+\begin{array}{lcl}
+p_{r,t=0}=exp(-40r^2) \\
+\dot{p}_{r,t=0}=0
+\end{array}
+\tag{9}
+$$
+where $r$ is the distance from the source position, with $p$ in pascals and $r$ in meters.
 
+For the air, we have the values of $p_0=100\ kPa​$, $\gamma=1.4​$, the speed of sound of air $c_0=340\ m/s​$. When considering the barriers as porous media, we specify the porosity $\phi=0.3​$, the static flow resistivity $\sigma=2000\ Pa\cdot{}s\cdot{}m^{-2}​$, and the porous medium structure factor $k_s=3​$, following those specified in Ref.13.
 
+The source is located at (0,1.5) and the receiver is located at (9,1). Considered the differences between Perfect Matching Layer (PML) and the Clay-Engquist-Majda (C-E-M) boundary, the size of the simulation domain is changed to $16.5m\times12m$. We use more dense mesh inside triangular barrier as is shown in Fig.8. The total cell quantity is 4.5 million, similar to 4.92 million of FDTD. The time step $\Delta{}t$ is $2\times10^{-6}\ s$, and the overall simulation time is $60\ ms$. The small grid size warrants a sufficient number of grid nodes within a wave-length, approximately 30 points for the highest frequency of interest at $1000\ Hz​$. The small time step not only satisfies the stability condition of the scheme<sup>15</sup> and the Nyquist rule for the high frequency requirement, but also gives a low CFL number that is needed to avoid generating spurious waves near the interface between the air and the porous medium.
+
+![DensifiedMeshOfTriBarrier](/imgs/DensifiedMeshOfTriBarrier.png)
+
+Fig.8. Part of the mesh, denser mesh was used inside the porous medium.
+
+![triBarrier_HW](/imgs/triBarrier_HW.png)
+
+Fig.9. Pressure contours at different times for the single rigid barrier (a). 13 ms (b). 23 ms.
+
+![triBarrier_HW](/imgs/triBarrier_PM.png)
+
+Fig.10. Pressure contours at different times for a triangular porous material barrier with flow resistivity $\sigma=2000\ Pa\cdot{}s\cdot{}m^{-2}​$ (a). 13 ms (b). 23 ms.
+
+Fig.9 illustrate how sound waves propagate over the single rigid barrier, and Fig.10 shows sound waves penetrate the porous material barrier. To determine the relative sound pressure levels and compare with the FDTD and analytical solutions (only rigid case), we performed a free field computation for sound propagation of the same impulse source to obtain sound pressure $p_{free}​$ and then use the following formula to obtain the relative sound pressure level:
+$$
+\Delta{L}=10\lg(p/p_{free})^2
+\tag{10}
+$$
+
+The comparisons with FDTD in time-domain is given in Fig.11, and the corresponding frequency domain contradistinction is given in Fig.12.
+
+![triBarrier_TimeDomain](/imgs/triBarrier_TimeDomain.png)
+
+Fig.11. Comparison of time-domain numerical results with FDTD (a). rigid barrier (b). porous material barrier with flow resistivity $\sigma=2000\ Pa\cdot{}s\cdot{}m^{-2}$.
+
+![triBarrier_FrequencyDomain](/imgs/triBarrier_FrequencyDomain.png)
+
+Fig.12. Comparison of frequency domain numerical results with FDTD and analytical solutions (if exist) (a). rigid barrier (b). porous material barrier with flow resistivity $\sigma=2000\ Pa\cdot{}s\cdot{}m^{-2}​$.
+
+We numbered some peaks in Fig.11 which you can find corresponding sound pulse propagate route in Fig.13. Most of them fits well with FDTD but one can find VC-FVM's "wave 2.5" is propagate faster but weaker than FDTD's.
+
+![soundWaveRoute](/imgs/soundWaveRoute.png)
+
+Fig.12. Sound pulse propagate routes (a). rigid barrier (b). porous material barrier with flow resistivity $\sigma=2000\ Pa\cdot{}s\cdot{}m^{-2}​$.
+
+## sonic crystals
+
+![SonicCrystials](/imgs/SonicCrystials.png)
+
+Fig.13. Description of the geometry of the numerical model.
+
+Fig.13 shows the geometry of the numerical model for sound propagation through sonic crystals. The Clay-Engquist-Majda (C-E-M) conditions are specified at all outside boundaries in the cases. the azure zone represent porous medium (parameters are same with the case triangular barrier). We compared numerical result of the sound attenuation at the receiver (10,10) as you can see in Fig.14.
+
+![sonicCrystial_IL](/imgs/sonicCrystial_IL.png)
+
+Fig.14. Comparison of the sound attenuation by frequency domain (a). regular square lattice (b). staggered lattice.
 
 # Reference
 
