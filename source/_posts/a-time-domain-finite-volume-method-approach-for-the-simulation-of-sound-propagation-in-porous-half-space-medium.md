@@ -8,7 +8,7 @@ A time-domain finite volume method solver was developed for the simulation of wa
 
 # Introduction
 
-Sound propagation in porous medium is an enduring topics in the file of the acoustic control due to it's cheap and efficiency. They are used in a variety of locations - close to source of noise, in various paths, and sometimes close to receivers.<sup>1</sup> Unlike frequency-domain acoustic simulation which was widely used today, time-domain simulation can provides much more information that help one understand the propagation process of a sound pulse. During the last two decades, the time-domain simulation of the porous media has been a reborn interest with the development of applications like medical imaging or sound crystals require the study of the sound propagation in the porous medium.<sup>2-9</sup> 
+Sound propagation in porous medium is an enduring topics in the file of the acoustic control due to porous acoustic absorbing materials' cheap and efficiency. They are used in a variety of locations - close to source of noise, in various paths, and sometimes close to receivers.<sup>1</sup> Unlike frequency-domain acoustic simulation which was widely used today, time-domain simulation can provides much more information that help one understand the propagation process of a sound pulse. During the last two decades, the time-domain simulation of the porous media has been a reborn interest with the development of applications like medical imaging or sound crystals require the study of the sound propagation in the porous medium.<sup>2-9</sup> 
 
 Serial time-domain numerical techniques have been developed to study sound propagation in porous medium, Most of them use finite-difference time-domain (FDTD) algorithms.<sup>10-13</sup> But there is one shortcoming that cannot be ignored that FDTD need additional process - such as immersed-boundary (IB) method - to adapt to the simulation of objects with complicated geometry.The finite volume method is widely used in fluid dynamics due to it's strictly  conservative and can be formulated on unstructured meshes.<sup>14</sup> Xuan et al. has developed an acoustic propagation simulator by time-domain finite volume method.<sup>15</sup> In this paper, we extend the algorithm to calculate acoustic propagation in porous medium using the Z-K model.
 
@@ -102,7 +102,8 @@ Fig.7. The distribution of sound pressure change rate over time which assumed in
 
 We use shape function to calculate the grade of the pressure in the cell，the right side of $Eq. 6$ can be rewritten as
 $$
-\sum_{i=1}^{nc}{\int_{\varGamma{}_i}\left(\nabla{}p\cdot\bm{n}\right)d\varGamma}=\sum_{i=1}^{nc}\sum_{j=1}^{ncn}{\left(\frac{\partial{}N_j}{\partial{}x}p_j,\frac{\partial{}N_j}{\partial{}y}p_j\right)}\cdot\int_{\varGamma_i}\bm{n}d\varGamma
+\sum_{i=1}^{nc}{\int_{\varGamma{}_i}\left(\nabla{}p\cdot\bm{n}\right)d\varGamma}\\
+=\sum_{i=1}^{nc}\sum_{j=1}^{ncn}{\left(\frac{\partial{}N_j}{\partial{}x}p_j,\frac{\partial{}N_j}{\partial{}y}p_j\right)}\cdot\int_{\varGamma_i}\bm{n}d\varGamma
 \tag{7}
 $$
 Where, $\frac{\partial{}N_j}{\partial{}x}$ and $\frac{\partial{}N_j}{\partial{}y}$ are the shape function of the cell, the value is dependent on the cell shape.
