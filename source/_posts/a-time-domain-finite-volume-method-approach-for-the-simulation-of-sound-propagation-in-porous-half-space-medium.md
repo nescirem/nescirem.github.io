@@ -4,19 +4,19 @@ date: 2019-02-21 21:42:59
 tags: [porous materials,finite volume method,numerical simulation]
 ---
 
-A time-domain finite volume method solver was developed for the simulation of wave propagation in porous media, in which the variables is vertex-centered arrangement and the solver is based on Zwikker and Kosten(Z-K) Model. The boundary condition between porous media and non-viscous fluid was discussed. This approach is validated by serial numerical results.
+A time-domain finite volume method solver was developed for the simulation of wave propagation in porous media, in which the variables are vertex-centred arrangement and the solver is based on Zwikker and Kosten(Z-K) Model. The boundary condition between porous media and non-viscous fluid was discussed. This approach is validated by serial numerical results.
 
 # Introduction
 
-Sound propagation in porous medium is an enduring topics in the file of the acoustic control due to porous acoustic absorbing materials' cheap and efficiency. They are used in a variety of locations - close to source of noise, in various paths, and sometimes close to receivers.<sup>1</sup> Unlike frequency-domain acoustic simulation which was widely used today, time-domain simulation can provides much more information that help one understand the propagation process of a sound pulse. During the last two decades, the time-domain simulation of the porous media has been a reborn interest with the development of applications like medical imaging or sound crystals require the study of the sound propagation in the porous medium.<sup>2-9</sup> 
+Sound propagation in a porous media is an enduring topic in the file of the acoustic control due to porous acoustic absorbing materials' cheap and efficiency. They are used in a variety of locations - close to the source of noise, in various paths, and sometimes close to receivers.<sup>1</sup> Unlike frequency-domain acoustic simulation which was widely used today, time-domain simulation can provide much more information that helps one understand the propagation process of a sound pulse. During the last two decades, the time-domain simulation of the porous media has been a reborn interest with the development of applications like medical imaging or sound crystals require the study of the sound propagation in the porous medium.<sup>2-9</sup> 
 
-Serial time-domain numerical techniques have been developed to study sound propagation in porous medium, Most of them use finite-difference time-domain (FDTD) algorithms.<sup>10-13</sup> But there is one shortcoming that cannot be ignored that FDTD need additional process - such as immersed-boundary (IB) method - to adapt to the simulation of objects with complicated geometry.The finite volume method is widely used in fluid dynamics due to it's strictly  conservative and can be formulated on unstructured meshes.<sup>14</sup> Xuan et al. has developed an acoustic propagation simulator by time-domain finite volume method.<sup>15</sup> In this paper, we extend the algorithm to calculate acoustic propagation in porous medium using the Z-K model.
+Serial time-domain numerical techniques have been developed to study sound propagation in the porous medium, Most of them use finite-difference time-domain (FDTD) algorithms.<sup>10-13</sup> But there is one shortcoming that cannot be ignored that FDTD needs additional process - such as immersed-boundary (IB) method - to adapt to the simulation of objects with complicated geometry. The finite volume method is widely used in fluid dynamics due to it's strictly  conservative and can be formulated on unstructured meshes.<sup>14</sup> Xuan et al. has developed an acoustic propagation simulator by time-domain finite volume method.<sup>15</sup> In this paper, we extend the algorithm to calculate acoustic propagation in the porous medium using the Z-K model.
 
-The paper is organised as follows: Section 2 presents the equations and limitations of  Z-K model in time-domain. The detail schemes of the discretization of equations are described in Section 3. Example calculations and comparison are provided in Section 4. A triangle porous barrier and two sonic crystals are used to test the numerical methods.
+The paper is organised as follows: Section 2 presents the equations and limitations of  Z-K model in time-domain. The detail schemes of the discretisation of equations are described in Section 3. Example calculations and comparison are provided in Section 4. A porous triangle barrier and two sonic crystals are used to test the numerical methods.
 
 # Model equations
 
-The linearized Euler equations are employed for sound propagation in the air medium, while the Zwikker-Kosten (Z-K) equation is applied to account for sound propagation inside the porous medium.The program solve those zones separately each time step.
+The linearized Euler equations are employed for sound propagation in the air medium, while the Zwikker-Kosten (Z-K) equation is applied to account for sound propagation inside the porous medium. The program solves those zones separately each time step.
 
 Outside the porous medium:
 
@@ -37,36 +37,36 @@ $$
 \tag{2}
 $$
 
-It is well known that the Wilson Model fits well with the empirical parameters of the porous medium acoustic characters. Figs.1-2 compare predictions from the Z-K and Wilson Models for the impedance $Z​$ and the phase speed $c=\omega{}Re[\Gamma]​$ when low frequency approximate values were used for the parameters of Z-K Model. The results are plotted as a function of the normalized frequency $\omega{}\tau_v​$. More details on how the comparisons between the Wilson Model and Z-K Model were made can be found in Ref.11. The parameter values chosen for these comparisons are $\sigma=2000\ Pa\cdot{}s\cdot{}m^{-2}​$, $\phi=0.3​$, $k_s=3​$, $c_0=340\ m/s​$, $\rho=1.226\ kg/m^3​$, $N_{Pr}=1​$, and $s_B=1​$.
+It is well known that the Wilson Model fits well with the empirical parameters of the porous medium acoustic characters. Figs.1-2 compare predictions from the Z-K and Wilson Models for the impedance $Z​$ and the phase speed $c=\omega{}Re[\Gamma]​$ when low-frequency approximate values were used for the parameters of Z-K Model. The results are plotted as a function of the normalised frequency $\omega{}\tau_v​$. More details on how the comparisons between the Wilson Model and Z-K Model were made can be found in Ref.11. The parameter values chosen for these comparisons are $\sigma=2000\ Pa\cdot{}s\cdot{}m^{-2}​$, $\phi=0.3​$, $k_s=3​$, $c_0=340\ m/s​$, $\rho=1.226\ kg/m^3​$, $N_{Pr}=1​$, and $s_B=1​$.
 
 ![ComparisonNormalizedImpedance](/imgs/ComparisonNormalizedImpedance_L.png)
 
-Fig.1. Normalized impedance prediction from the Z-K Model (low frequency) and Wilson Model. The negative of the imaginary part is plotted. Calculations are shown as a function of the normalized frequency $\omega{}\tau_v​$, where $\tau_v​$ is the relaxation time for viscous diffusion in the pores.
+Fig.1. Normalized impedance prediction from the Z-K Model (low frequency) and the Wilson Model. The negative of the imaginary part is plotted. Calculations are shown as a function of the normalized frequency $\omega{}\tau_v$, where $\tau_v$ is the relaxation time for viscous diffusion in the pores.
 
 ![ComparisonNormalizedPhaseSpeed](/imgs/ComparisonNormalizedPhaseSpeed_L.png)
 
-Fig.2. Phase speed predictions from the Z-K Model (low frequency) and Wilson Model. Plotted is the phase speed divided by the phase speed in air, $c_0​$.
+Fig.2. Phase speed predictions from the Z-K Model (low frequency) and the Wilson Model. Plotted is the phase speed divided by the phase speed in air, $c_0$.
 
-The impedance of two models are nearly identical, but the phase speed of Z-K Model is too low and separate dramatically with the increase of frequency. If we apply high frequency approximate values of Z-K Model, The continuity equation in $Eqs. 2​$ will be rewritten as
+The impedance of two models are nearly identical, but the phase speed of Z-K Model is too low and separate dramatically with the increase of frequency. If we apply high-frequency approximate values of Z-K Model, The continuity equation in $Eqs. 2$ will be rewritten as
 $$
 \frac{\phi}{p_0\gamma}\frac{\partial{}p}{\partial{}t}=-\nabla{}\cdot{}\bm{v}
 \tag{3}
 $$
-where $\gamma​$ is the ratio of specific heats in air. The impedance and the phase speed of Z-K Model will change a lot as shown in Figs.3-4.
+where $\gamma$ is the ratio of specific heats in the air. The impedance and the phase speed of Z-K Model will change a lot as shown in Figs.3-4.
 
 ![ComparisonNormalizedImpedance_H](/imgs/ComparisonNormalizedImpedance_H.png)
 
-Fig.3. Normalized impedance prediction from the Z-K Model (high frequency) and Wilson Model. The negative of the imaginary part is plotted. Calculations are shown as a function of the normalized frequency $\omega{}\tau_v​$, where $\tau_v​$ is the relaxation time for viscous diffusion in the pores.
+Fig.3. Normalised impedance prediction from the Z-K Model (high frequency) and the Wilson Model. The negative of the imaginary part is plotted. Calculations are shown as a function of the normalised frequency $\omega{}\tau_v$, where $\tau_v$ is the relaxation time for viscous diffusion in the pores.
 
 ![ComparisonNormalizedPhaseSpeed_H](/imgs/ComparisonNormalizedPhaseSpeed_H.png)
 
-Fig.4. Phase speed predictions from the Z-K Model (high frequency) and Wilson Model. Plotted is the phase speed divided by the phase speed in air, $c_0​$.
+Fig.4. Phase speed predictions from the Z-K Model (high frequency) and the Wilson Model. Plotted is the phase speed divided by the phase speed in air, $c_0$.
 
-The impedance of the Z-K Model becomes incorrect when $\omega{}\tau_v\ll1​$, but the phase speed fit better with the Wilson Model. Fig.2 and 4 shows that the phase speed becomes independent of frequency for large $\omega{}\tau_v​$, whereas it should actually increase as $\omega^{1/2}​$. 
+The impedance of the Z-K Model becomes incorrect when $\omega{}\tau_v\ll1$, but the phase speed fit better with the Wilson Model. Fig.2 and 4 show that the phase speed becomes independent of frequency for large $\omega{}\tau_v$, whereas it should be actually increase as $\omega^{1/2}$. 
 
 # Numerical schemes
 
-In this section, we consider time-domain numerical implementation of the relaxation model. For the efficiency of calculation，consider simplify the control equation further：Differentiating the continuity equation in $Eqs. 2​$ by time, grading the movement equation then one can derive that
+In this section, we consider the time-domain numerical implementation of Z-K equations. For the efficiency of calculation，consider simplify the control equation further：Differentiating the continuity equation in $Eqs. 2$ by time, grading the movement equation then one can derive that
 $$
 \begin{cases}
 a\frac{\partial^2p}{\partial{}t^2}+b\frac{\partial{}p}{\partial{}t}=\nabla{}^2p \\
@@ -74,11 +74,11 @@ a=\frac{k_s\rho_0}{\gamma{}p_0},b=\frac{\sigma{}\phi}{p_0}
 \end{cases}
 \tag{4}
 $$
-That is a single variable control equation which means that one need not consider variable coupling and can improve the efficiency of calculate dramatically. There is a high order spatial term $\nabla^2p$ in the control equation. The program use the idea of shape function to solve it (more detail will given later). We apply Vertical-Centered Finite Volume Method (VC-FVM) to discrete $Eq. 4$ and define the sound pressure on the mesh node. We assume a linear distribution (or quadratic linear distribution) of the sound pressure within the mesh cell. The control volume of the VC-FVM is showed in Fig.5 (the black line is the mesh elements and black points is the mesh nodes, the control volume of one example node is surrounded by azure faces) and Fig.6 given the assumption of the sound pressure distribution within the 2-D mesh.
+That is a single variable control equation which means that one need not consider variable coupling and can improve the efficiency of calculating dramatically. There is a high order spatial term $\nabla^2p$ in the control equation. The program uses the idea of shape function to solve it (more detail will be given later). We apply Vertical-Centered Finite Volume Method (VC-FVM) to discrete $Eq. 4$ and define the sound pressure on the mesh node. We assume a linear distribution (or quadratic linear distribution) of the sound pressure within the mesh cell. The control volume of the VC-FVM is showed in Fig.5 (the black lines are the mesh elements and black points are the mesh nodes, the control volume of one example node is surrounded by azure faces) and Fig.6 given the assumption of the sound pressure distribution within the 2-D mesh.
 
 ![VC-FVM](/imgs/VC-FVM.png)
 
-Fig.5. Control volume of the vertex-centered finite volume method (a). 2-D triangle cell (b). 3-D tetrahedron cell.
+Fig.5. Control volume of the vertex-centred finite volume method (a). 2-D triangle cell (b). 3-D tetrahedron cell.
 
 ![VC-FVM_VriableDistribution](/imgs/VC-FVM_VriableDistribution.png)
 
@@ -118,7 +118,7 @@ $$
 
 # Simulation results
 
-We recalculated a triangle porous barrier given in Ref.13 and the sonic crystals in Ref.9 to test our program. And have made sure that parameter values are the same as each source case, the number of grids in VC-FVM is similar to there source cases.
+We recalculated a porous triangle barrier given in Ref.13 and the sonic crystals in Ref.9 to test our program. And have made sure that parameter values are the same as each source case, the number of grids in VC-FVM is similar to there source cases.
 
 ## single triangle barrier
 
@@ -134,11 +134,11 @@ where $r$ is the distance from the source position, with $p$ in pascals and $r$ 
 
 For the air, we have the values of $p_0=100\ kPa​$, $\gamma=1.4​$, the speed of sound of air $c_0=340\ m/s​$. When considering the barriers as porous media, we specify the porosity $\phi=0.3​$, the static flow resistivity $\sigma=2000\ Pa\cdot{}s\cdot{}m^{-2}​$, and the porous medium structure factor $k_s=3​$, following those specified in Ref.13.
 
-The source is located at (0,1.5) and the receiver is located at (9,1). Considered the differences between Perfect Matching Layer (PML) and the Clay-Engquist-Majda (C-E-M) boundary, the size of the simulation domain is changed to $16.5m\times12m$. We use more dense mesh inside triangular barrier as is shown in Fig.8. The total cell quantity is 4.5 million, similar to 4.92 million of FDTD. The time step $\Delta{}t$ is $2\times10^{-6}\ s$, and the overall simulation time is $60\ ms$. The small grid size warrants a sufficient number of grid nodes within a wave-length, approximately 30 points for the highest frequency of interest at $1000\ Hz​$. The small time step not only satisfies the stability condition of the scheme<sup>15</sup> and the Nyquist rule for the high frequency requirement, but also gives a low CFL number that is needed to avoid generating spurious waves near the interface between the air and the porous medium.
+The source is located at (0,1.5)m, and the receiver is located at (9,1)m. Considered the differences between Perfect Matching Layer (PML) and the Clay-Engquist-Majda (C-E-M) boundary, the size of the simulation domain is changed to $16.5m\times12m$. We use more dense mesh inside the triangular barrier as is shown in Fig.8. The total cell quantity is 4.5 million, similar to 4.92 million of FDTD. The time step $\Delta{}t$ is $2\times10^{-6}\ s$, and the overall simulation time is $60\ ms$. The small grid size warrants a sufficient number of grid nodes within a wavelength, approximately 30 points for the highest frequency of interest at $1000\ Hz$. The small time step not only satisfies the stability condition of the scheme<sup>15</sup> and the Nyquist rule for the high-frequency requirement but also gives a low CFL number that is needed to avoid generating spurious waves near the interface between the air and the porous medium.
 
 ![DensifiedMeshOfTriBarrier](/imgs/DensifiedMeshOfTriBarrier.png)
 
-Fig.8. Part of the mesh, denser mesh was used inside the porous medium.
+Fig.8. Part of the mesh, the denser mesh was used inside the porous medium.
 
 ![triBarrier_HW](/imgs/triBarrier_HW.png)
 
@@ -148,7 +148,7 @@ Fig.9. Pressure contours at different times for the single rigid barrier (a). 13
 
 Fig.10. Pressure contours at different times for a triangular porous material barrier with flow resistivity $\sigma=2000\ Pa\cdot{}s\cdot{}m^{-2}​$ (a). 13 ms (b). 23 ms.
 
-Fig.9 illustrate how sound waves propagate over the single rigid barrier, and Fig.10 shows sound waves penetrate the porous material barrier. To determine the relative sound pressure levels and compare with the FDTD and analytical solutions (only rigid case), we performed a free field computation for sound propagation of the same impulse source to obtain sound pressure $p_{free}​$ and then use the following formula to obtain the relative sound pressure level:
+Fig.9 illustrates how sound waves propagate over the single rigid barrier, and Fig.10 shows sound waves penetrate the porous material barrier. To determine the relative sound pressure levels and compare with the FDTD and analytical solutions (only rigid case), we performed a free field computation for sound propagation of the same impulse source to obtain sound pressure $p_{free}$ and then use the following formula to obtain the relative sound pressure level:
 $$
 \Delta{L}=10\lg(p/p_{free})^2
 \tag{10}
@@ -164,7 +164,7 @@ Fig.11. Comparison of time-domain numerical results with FDTD (a). rigid barrier
 
 Fig.12. Comparison of frequency domain numerical results with FDTD and analytical solutions (if exist) (a). rigid barrier (b). porous material barrier with flow resistivity $\sigma=2000\ Pa\cdot{}s\cdot{}m^{-2}​$.
 
-We numbered some peaks in Fig.11 which you can find corresponding sound pulse propagate route in Fig.13. Most of them fits well with FDTD but one can find VC-FVM's "wave 2.5" is propagate faster but weaker than FDTD's.
+We numbered some peaks in Fig.11 which you can find corresponding sound pulse propagate route in Fig.13. Most of them fit well with FDTD, but one can find VC-FVM's "wave 2.5" is propagated faster but weaker than FDTD's.
 
 ![soundWaveRoute](/imgs/soundWaveRoute.png)
 
@@ -176,7 +176,7 @@ Fig.12. Sound pulse propagate routes (a). rigid barrier (b). porous material bar
 
 Fig.13. Description of the geometry of the numerical model.
 
-Fig.13 shows the geometry of the numerical model for sound propagation through sonic crystals. The Clay-Engquist-Majda (C-E-M) conditions are specified at all outside boundaries in the cases. the azure zone represent porous medium (parameters are same with the case triangular barrier). We compared numerical result of the sound attenuation at the receiver (10,10) as you can see in Fig.14.
+Fig.13 shows the geometry of the numerical model for sound propagation through sonic crystals. The Clay-Engquist-Majda (C-E-M) conditions are specified at all outside boundaries in the cases. The azure zone represents porous medium (parameters are the same with the case triangular barrier). We compared the numerical result of the sound attenuation at the receiver (10,10) as you can see in Fig.14.
 
 ![sonicCrystial_IL](/imgs/sonicCrystial_IL.png)
 
